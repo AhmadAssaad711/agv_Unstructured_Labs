@@ -1,0 +1,82 @@
+
+=== STRAIGHT references ===
+maneuver                    agent  episodes  success_rate  collision_rate  timeout_rate  mean_return  mean_survival_time_s  mean_time_to_collision_s  mean_creep_zone_speed  high_speed_zone_rate  creep_speed_rate  mean_min_ttc  mean_action_change_rate  slower_action_rate  idle_action_rate  faster_action_rate
+straight            scripted_fast        30           0.7        0.300000      0.000000    83.467145              7.640000                  4.266667               8.686129              0.966667          0.000000      0.582127                 0.033686            0.000000          0.000000             1.00000
+straight      scripted_hold_speed        30           0.7        0.300000      0.000000    83.467145              7.640000                  4.266667               8.686129              0.966667          0.000000      0.582127                 0.000000            0.000000          1.000000             0.00000
+straight scripted_reward_creeping        30           0.6        0.333333      0.066667    74.281284             17.666667                 10.500000               2.967762              0.061853          0.879442      0.840607                 0.282801            0.159879          0.726531             0.11359
+
+=== STRAIGHT ppo_standard train/eval ===
+Using cpu device
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 50.7     |
+|    ep_rew_mean     | 59.9     |
+| time/              |          |
+|    fps             | 131      |
+|    iterations      | 1        |
+|    time_elapsed    | 23       |
+|    total_timesteps | 3072     |
+---------------------------------
+------------------------------------------
+| rollout/                |              |
+|    ep_len_mean          | 52.5         |
+|    ep_rew_mean          | 70.2         |
+| time/                   |              |
+|    fps                  | 126          |
+|    iterations           | 2            |
+|    time_elapsed         | 48           |
+|    total_timesteps      | 6144         |
+| train/                  |              |
+|    approx_kl            | 0.0003388004 |
+|    clip_fraction        | 0            |
+|    clip_range           | 0.2          |
+|    entropy_loss         | -1.1         |
+|    explained_variance   | 0.00664      |
+|    learning_rate        | 0.00025      |
+|    loss                 | 124          |
+|    n_updates            | 4            |
+|    policy_gradient_loss | -0.00162     |
+|    value_loss           | 261          |
+------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 54            |
+|    ep_rew_mean          | 75.5          |
+| time/                   |               |
+|    fps                  | 126           |
+|    iterations           | 3             |
+|    time_elapsed         | 72            |
+|    total_timesteps      | 9216          |
+| train/                  |               |
+|    approx_kl            | 0.00014896599 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.2           |
+|    entropy_loss         | -1.1          |
+|    explained_variance   | 0.0281        |
+|    learning_rate        | 0.00025       |
+|    loss                 | 138           |
+|    n_updates            | 8             |
+|    policy_gradient_loss | -0.000636     |
+|    value_loss           | 297           |
+-------------------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 52.8          |
+|    ep_rew_mean          | 75            |
+| time/                   |               |
+|    fps                  | 129           |
+|    iterations           | 4             |
+|    time_elapsed         | 95            |
+|    total_timesteps      | 12288         |
+| train/                  |               |
+|    approx_kl            | 0.00018101447 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.2           |
+|    entropy_loss         | -1.1          |
+|    explained_variance   | 0.067         |
+|    learning_rate        | 0.00025       |
+|    loss                 | 157           |
+|    n_updates            | 12            |
+|    policy_gradient_loss | -0.00102      |
+|    value_loss           | 312           |
+-------------------------------------------
