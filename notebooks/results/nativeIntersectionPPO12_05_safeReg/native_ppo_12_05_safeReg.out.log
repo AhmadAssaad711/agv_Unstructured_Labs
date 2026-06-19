@@ -1,0 +1,15 @@
+
+=== STRAIGHT train native PPO ===
+{
+  "maneuver": "straight",
+  "destination": "o2",
+  "initial_vehicle_count": 12,
+  "spawn_probability": 0.5,
+  "duration": 22,
+  "policy_frequency": 5,
+  "simulation_frequency": 15,
+  "vehicles_count": 15,
+  "reward_speed_low": 7.0,
+  "reward_speed_high": 9.0
+}
+Using cpu device

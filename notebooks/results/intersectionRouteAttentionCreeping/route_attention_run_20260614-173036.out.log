@@ -1,0 +1,40 @@
+
+=== STRAIGHT references ===
+maneuver                    agent  episodes  success_rate  collision_rate  timeout_rate  mean_return  mean_survival_time_s  mean_time_to_collision_s  mean_creep_zone_speed  high_speed_zone_rate  creep_speed_rate  mean_min_ttc  mean_action_change_rate  slower_action_rate  idle_action_rate  faster_action_rate
+straight            scripted_fast        40         0.750            0.25         0.000    89.863574                 7.910                  4.340000               8.764949              0.975000          0.000000      0.636359                 0.031197            0.000000          0.000000            1.000000
+straight      scripted_hold_speed        40         0.750            0.25         0.000    89.863574                 7.910                  4.340000               8.764949              0.975000          0.000000      0.636359                 0.000000            0.000000          1.000000            0.000000
+straight scripted_reward_creeping        40         0.575            0.30         0.125    73.200872                18.175                 10.483333               2.988120              0.063257          0.886914      0.825828                 0.282212            0.158787          0.727138            0.114075
+
+=== STRAIGHT ppo_standard train/eval ===
+Using cuda device
+---------------------------------
+| rollout/           |          |
+|    ep_len_mean     | 48.3     |
+|    ep_rew_mean     | 65.3     |
+| time/              |          |
+|    fps             | 150      |
+|    iterations      | 1        |
+|    time_elapsed    | 13       |
+|    total_timesteps | 2048     |
+---------------------------------
+-------------------------------------------
+| rollout/                |               |
+|    ep_len_mean          | 47.4          |
+|    ep_rew_mean          | 63.3          |
+| time/                   |               |
+|    fps                  | 139           |
+|    iterations           | 2             |
+|    time_elapsed         | 29            |
+|    total_timesteps      | 4096          |
+| train/                  |               |
+|    approx_kl            | 0.00024487812 |
+|    clip_fraction        | 0             |
+|    clip_range           | 0.2           |
+|    entropy_loss         | -1.1          |
+|    explained_variance   | 0.00145       |
+|    learning_rate        | 0.00025       |
+|    loss                 | 146           |
+|    n_updates            | 4             |
+|    policy_gradient_loss | -0.00164      |
+|    value_loss           | 306           |
+-------------------------------------------
